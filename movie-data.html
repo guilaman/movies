@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>udand1_project3_investigate-a-dataset-GAC_commentsadded</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>movie-data</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11800,7 +11800,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First I import the libraries I will be using for this project.</span>
@@ -11829,7 +11829,7 @@ Since I intend to analyze only reasonably popular movies with many viewer votes,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I load the original dataset and do some initital exploration of its properties.</span>
@@ -11848,7 +11848,7 @@ Since I intend to analyze only reasonably popular movies with many viewer votes,
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[32]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -11886,7 +11886,7 @@ Since I intend to analyze only reasonably popular movies with many viewer votes,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">original_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -11902,7 +11902,7 @@ Since I intend to analyze only reasonably popular movies with many viewer votes,
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[33]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -12046,7 +12046,7 @@ The analysis I want to make is fairly simple but I want to keep some text column
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I choose which columns I want to keep for my analysis, and use a list comprehension to produce a list with</span>
@@ -12070,7 +12070,7 @@ The analysis I want to make is fairly simple but I want to keep some text column
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -12107,7 +12107,7 @@ The analysis I want to make is fairly simple but I want to keep some text column
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add the last column I need and get some basic statistics on the numeric fields.</span>
@@ -12126,7 +12126,7 @@ The analysis I want to make is fairly simple but I want to keep some text column
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -12263,7 +12263,7 @@ I will first of all <strong>drop movies with missing runtime data or a runtime u
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use boolean indexing to reduce the DataFrame based on movie runtime.</span>
@@ -12282,7 +12282,7 @@ I will first of all <strong>drop movies with missing runtime data or a runtime u
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[36]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -12308,7 +12308,7 @@ I will first of all <strong>drop movies with missing runtime data or a runtime u
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I drop rows with zero or missing values in key fields, then look at the numbers before I refine the trimming.</span>
@@ -12328,7 +12328,7 @@ I will first of all <strong>drop movies with missing runtime data or a runtime u
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[37]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -12464,7 +12464,7 @@ I also see that after my previous filters the mean vote count per movie is over 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I use the statistics above to decide what the last numeric value filters should be, and apply them.</span>
@@ -12484,7 +12484,7 @@ I also see that after my previous filters the mean vote count per movie is over 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[38]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -12622,7 +12622,7 @@ I also see that after my previous filters the mean vote count per movie is over 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If a movie&#39;s genre falls into one of the if / elif filters then the following elif statements are ignored;</span>
@@ -12674,7 +12674,7 @@ I also see that after my previous filters the mean vote count per movie is over 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[39]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -12720,7 +12720,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I use a list comprehension to crete a list of the genres represented in</span>
@@ -12743,7 +12743,7 @@ Name: genre_clean, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[40]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -12772,7 +12772,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the total distinct genres and the final shape of my clean dataset.</span>
@@ -12790,7 +12790,7 @@ Name: genre_clean, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[43]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -12807,7 +12807,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clean_df</span><span class="o">.</span><span class="n">shape</span>
@@ -12823,7 +12823,7 @@ Name: genre_clean, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[44]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -12860,7 +12860,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># A quick look at numerical values accross genres.</span>
@@ -12878,7 +12878,7 @@ Name: genre_clean, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[45]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -13054,7 +13054,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I notice substantial differences in the mean revenue-to-budget-ratio and make a visualization.</span>
@@ -13103,7 +13103,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I also want a visualization of the fields making up said ratio to see if contrasts look equally sharp.</span>
@@ -13152,7 +13152,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clean_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;genre_clean&#39;</span><span class="p">)[</span><span class="s1">&#39;revenue_adj&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
@@ -13199,7 +13199,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make a histogram to show trends in amount of released movies.</span>
@@ -13249,7 +13249,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use a line chart to visualize changes in revenue-to-budget-ratio over time.</span>
@@ -13300,7 +13300,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Look at statistics to decide if dividing the dataset based in a certain category is necessary.</span>
@@ -13318,7 +13318,7 @@ Name: genre_clean, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[51]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -13453,7 +13453,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Given the big disparities in revenue-to-budget-ratio I divide the working dataframe in two tiers</span>
@@ -13473,7 +13473,7 @@ Name: genre_clean, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[52]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -13599,7 +13599,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">high_revratio</span> <span class="o">=</span> <span class="n">clean_df</span><span class="p">[</span><span class="n">clean_df</span><span class="o">.</span><span class="n">rev_to_budg_ratio</span> <span class="o">&gt;=</span> <span class="mi">15</span><span class="p">]</span>
@@ -13616,7 +13616,7 @@ Name: genre_clean, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[54]:</div>
+<div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -13753,7 +13753,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I plot the Mean revenue:budget ratio by year again looking at the two tiers of movies separately.</span>
@@ -13805,7 +13805,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I look at statistics of each revenue:budget ratio tier,</span>
@@ -13824,7 +13824,7 @@ Name: genre_clean, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[58]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -14014,7 +14014,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">high_revratio</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;genre_clean&#39;</span><span class="p">)[</span><span class="s1">&#39;release_year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14030,7 +14030,7 @@ Name: genre_clean, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[59]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -14239,7 +14239,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I use scatterplots to look for correlation between the two dependent variables in the dataset.</span>
@@ -14278,7 +14278,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">high_revratio</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;vote_average&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;rev_to_budg_ratio&#39;</span><span class="p">)</span>
@@ -14323,7 +14323,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># With boolean indexing I create a new scatterplot of the &#39;high ratio&#39; group without outliers.</span>
@@ -14372,7 +14372,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Compute vote score statistics grouping by genre to look for any patterns.</span>
@@ -14390,7 +14390,7 @@ Name: genre_clean, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[64]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -14580,7 +14580,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Since genres showed a clear disparity in mean revenue:budget ratio, I plot a similar chart</span>
@@ -14621,7 +14621,7 @@ Name: genre_clean, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clean_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;genre_clean&#39;</span><span class="p">)[</span><span class="s1">&#39;rev_to_budg_ratio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
@@ -14674,7 +14674,7 @@ Name: genre_clean, dtype: int64</pre>
 <h4 id="Limitations-of-the-analysis-performed">Limitations of the analysis performed<a class="anchor-link" href="#Limitations-of-the-analysis-performed">&#182;</a></h4><p>The conclusions expressed above come from analyzing around a quarter of the total movies in the original dataset.
 There may have been movies excluded from the analysis that had characteristics comparable to those analyzed but were dropped due to having missing or erroneous values in fields such as budget and revenue.
 There may be categorical data other than genre that are also related with the revenue or viewer scores of a movie but were not analyzed for this project, such as the cast, director or production companies.
-Finally, the average vote score of a movie in the original dataset is not necessarily an accurate representation of how much viewers in general enjoy or are likely to enjoy said movie, rather it's a measure of how users of a particular website rated this particular movie.</p>
+Finally, the average vote score of a movie in the original dataset is not necessarily an accurate representation of how much viewers in general are likely to enjoy said movie, rather it's a measure of how users of a particular website rated this particular movie.</p>
 
 </div>
 </div>
